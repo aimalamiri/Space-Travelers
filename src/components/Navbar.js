@@ -16,6 +16,9 @@ const Navbar = () => {
         <NavLink to="/" style={({ isActive }) => activeLink(isActive)}>
           Home
         </NavLink>
+        <NavLink to="/missions" style={({ isActive }) => activeLink(isActive)}>
+          Missions
+        </NavLink>
         <NavLink to="/about" style={({ isActive }) => activeLink(isActive)}>
           About
         </NavLink>
