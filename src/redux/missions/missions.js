@@ -12,9 +12,14 @@ export default (state = [], action) => {
 };
 
 export const missionsListAction = () => async (dispatch) => {
-  const missions = await axios.get('missions');
+  const response = await axios.get('missions');
+  const missions = response.data.map((mission) => ({
+    mission_id: mission.mission_id,
+    mission_name: mission.mission_name,
+    description: mission.description,
+  }));
   dispatch({
     type: MISSIONS_LIST,
-    payload: missions.data,
+    payload: missions,
   });
 };
