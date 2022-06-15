@@ -1,19 +1,11 @@
 import axios from '../../services/axios';
-import * as actions from './actions';
 
-const stateInit = [];
+const GET_ROCKETS = 'spacetravelers/rockets/GET_ROCKETS';
 
-const rocketsReducer = (state = stateInit, action) => {
+const rocketsReducer = (state = [], action) => {
   switch (action.type) {
-    case actions.ADD_RESERVATION:
-      return [...state.map((r) => (r.id !== action.payload ? r : { ...r, reserv: true }))];
-
-    case actions.GET_ROCKETS:
-      return [...state, action.payload];
-
-    case actions.DELETE_RESERVATION:
-      return state.map((r) => (r.id !== action.payload ? r : { ...r, reserv: false }));
-
+    case GET_ROCKETS:
+      return action.payload;
     default:
       return state;
   }
@@ -21,7 +13,10 @@ const rocketsReducer = (state = stateInit, action) => {
 
 export const getRocketList = () => (dispatch) => {
   axios.get('rockets').then((res) => {
-    dispatch(actions.getRockets(res.data));
+    dispatch({
+      type: GET_ROCKETS,
+      payload: res.data,
+    });
   });
 };
 

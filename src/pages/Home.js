@@ -1,3 +1,5 @@
-const Home = () => (<h1>Home</h1>);
+import Rockets from '../components/Rockets';
+
+const Home = () => (<Rockets />);
 
 export default Home;
