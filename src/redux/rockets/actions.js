@@ -1,6 +1,6 @@
 export const ADD_RESERVATION = 'spacetravelers/rockets/ADD_RESERVATION';
 export const DELETE_RESERVATION = 'spacetravelers/rockets/DELETE_RESERVATION';
-export const GET_ROCKETS = 'GET_ROCKETS';
+export const GET_ROCKETS = 'spacetravelers/rockets/GET_ROCKETS';
 
 export const addReservation = (payload) => ({
   type: ADD_RESERVATION,
