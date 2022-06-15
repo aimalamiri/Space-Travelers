@@ -11,11 +11,11 @@ const Mission = (props) => {
   } = mission.mission;
 
   return (
-    <div className="mission">
-      <span>{id}</span>
-      <h2>{name}</h2>
-      <p>{description}</p>
-    </div>
+    <tr>
+      <td>{id}</td>
+      <td>{name}</td>
+      <td>{description}</td>
+    </tr>
   );
 };
 
