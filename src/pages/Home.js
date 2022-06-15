@@ -1,4 +1,4 @@
-import Rockets from '../components/Rockets';
+import Rockets from './Rockets';
 
 const Home = () => (<Rockets />);
 

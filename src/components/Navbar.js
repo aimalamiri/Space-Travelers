@@ -8,7 +8,7 @@ const Navbar = () => {
   const activeLink = (isActive) => (isActive ? { textDecoration: 'underline' } : undefined);
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="logo-section">
         <img className="logo" src={planet} alt="space travelers" />
       </div>
@@ -23,7 +23,7 @@ const Navbar = () => {
           About
         </NavLink>
       </div>
-    </div>
+    </nav>
   );
 };
 
