@@ -9,16 +9,18 @@ import Rockets from './pages/Rockets';
 
 function App() {
   return (
-    <Container>
+    <>
       <Navbar />
-      <div className="py-5">
-        <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<Missions />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
-    </Container>
+      <Container>
+        <div className="py-5">
+          <Routes>
+            <Route path="/" element={<Rockets />} />
+            <Route path="/missions" element={<Missions />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+      </Container>
+    </>
   );
 }
 
