@@ -7,11 +7,13 @@ export default (state = [], action) => {
   switch (action.type) {
     case MISSIONS_LIST:
       return action.payload;
+
     case JOIN_MISSION:
       return state.map((mission) => {
         if (mission.mission_id !== action.payload) return mission;
-        return { ...mission, isJoined: true };
+        return { ...mission, isJoined: !mission.isJoined };
       });
+
     default:
       return state;
   }
