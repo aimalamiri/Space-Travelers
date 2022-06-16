@@ -8,7 +8,11 @@ import { getRocketList } from '../redux/rockets/reducer';
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
-  useEffect(() => dispatch(getRocketList()), []);
+  useEffect(() => {
+    if (rockets.length === 0) {
+      dispatch(getRocketList());
+    }
+  }, []);
 
   return (
     <div className="rockets-main-container">
