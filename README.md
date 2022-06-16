@@ -1,46 +1,97 @@
-# Getting Started with Create React App and Redux
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Space Travelers 
 
-## Available Scripts
+> The Space Travelers is a a React, Redux application based on the [SpaceX API](https://docs.spacexdata.com/). 
 
-In the project directory, you can run:
+In this application we're storing the returned data from the API in the Redux store.
 
-### `npm start`
+The user can reserve a rocket and it'll update the state automatically, and also the user can join a mission in this application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built With
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- Redux
+- React Bootstrap
 
-### `npm test`
+## Live Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Live Demo Link](https://62ab59efaba720006c4e868a--deluxe-tarsier-340cb2.netlify.app/)
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get a local copy up and running follow these simple steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. NodeJS
+2. NPM
 
-### `npm run eject`
+Now open your terminal and navigate to the folder you would like to save the project.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Type these commands into the terminal:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- git clone https://github.com/aimalamiri/Space-Travelers.git
+- cd Space-Travelers
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- If you work on Windows, you can use this command in Git Bash.
 
-## Learn More
+### Install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Type this command into the terminal:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- npm install
+
+### Build
+
+Type these commands into the terminal:
+
+- npm run build
+- Open dist/index.html in your web browser.
+
+### Run the application in local environment
+
+Type this command in your terminal
+
+- npm run start
+- Your web browser will open on localhost
+
+### Run tests
+
+Type this command into the terminal:
+
+- npm run test
+
+## Authors
+
+👤 **Aimal Amiri**
+
+- GitHub: [@aimalamiri](https://github.com/aimalamiri)
+- Twitter: [@meaimal](https://twitter.com/meaimal)
+- LinkedIn: [Aimal Amiri](https://linkedin.com/in/aimal-amiri)
+
+👤 **Roberto A. Baños Alvarez**
+
+- GitHub: [@Theophileaseh](https://github.com/Theophileaseh)
+- Twitter: [@NwachanT](https://twitter.com/NwachanT)
+- LinkedIn: [nwachan-theophile-342274172](https://www.linkedin.com/in/nwachan-theophile-342274172/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [SpaceX API](https://docs.spacexdata.com/) for providing the data for free 
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
