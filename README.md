@@ -16,7 +16,7 @@ The user can reserve a rocket and it'll update the state automatically, and also
 
 ## Live Demo
 
-- [Live Demo Link](https://www.linkedin.com/in/nwachan-theophile-342274172/)
+- [Live Demo Link](https://62ab59efaba720006c4e868a--deluxe-tarsier-340cb2.netlify.app/)
 
 ## Getting Started
 
