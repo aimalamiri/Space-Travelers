@@ -14,7 +14,7 @@ const Navbar = () => {
       </div>
       <div className="flex">
         <NavLink to="/" style={({ isActive }) => activeLink(isActive)}>
-          Home
+          Rockets
         </NavLink>
         <NavLink to="/missions" style={({ isActive }) => activeLink(isActive)}>
           Missions

@@ -6,15 +6,16 @@ const Rocket = (props) => {
   const rocket = props;
   const {
     rocket_name: names,
-    id,
-    description,
+    id, description,
     flickr_images: img,
   } = rocket.rocket;
 
   return (
-    <Row id={id}>
-      <Col><img src={img} alt="rocket img" /></Col>
-      <Col xs={9}>
+    <Row id={id} className="my-4">
+      <Col md={5}>
+        <img src={img} alt="rocket img" className="w-100" />
+      </Col>
+      <Col>
         <p className="rocket-name">{names}</p>
         <p className="rocket-desc">{description}</p>
       </Col>

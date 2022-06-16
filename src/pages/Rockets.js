@@ -13,8 +13,8 @@ const Rockets = () => {
   return (
     <div className="rockets-main-container">
       <Container>
-        { rockets.map((rocket) => (
-          <Rocket id={rocket.id} key={rocket.id} />
+        {rockets.map((rocket) => (
+          <Rocket rocket={rocket} key={rocket.id} />
         ))}
       </Container>
     </div>
