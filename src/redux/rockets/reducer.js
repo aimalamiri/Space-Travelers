@@ -2,6 +2,7 @@ import axios from '../../services/axios';
 
 const GET_ROCKETS = 'spacetravelers/rockets/GET_ROCKETS';
 const RESERVE_ROCKET = 'spacetravelers/rockets/RESERVE_ROCKET';
+const CANCEL_ROCKET = 'spacetravelers/rockets/CANCEL_ROCKET';
 
 const rocketsReducer = (state = [], action) => {
   switch (action.type) {
@@ -12,6 +13,12 @@ const rocketsReducer = (state = [], action) => {
       return state.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: !rocket.reserved };
+      });
+
+    case CANCEL_ROCKET:
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: false };
       });
 
     default:
@@ -31,6 +38,13 @@ export const getRocketList = () => (dispatch) => {
 export const reserveRocket = (id) => (dispatch) => {
   dispatch({
     type: RESERVE_ROCKET,
+    payload: id,
+  });
+};
+
+export const cancelRocket = (id) => (dispatch) => {
+  dispatch({
+    type: CANCEL_ROCKET,
     payload: id,
   });
 };
