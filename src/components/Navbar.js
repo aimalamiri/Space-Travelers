@@ -25,8 +25,8 @@ const Navbar = () => {
               <NavLink to="/missions" style={({ isActive }) => activeLink(isActive)} className="text-dark">
                 Missions
               </NavLink>
-              <NavLink to="/about" style={({ isActive }) => activeLink(isActive)} className="text-dark">
-                About
+              <NavLink to="/profile" style={({ isActive }) => activeLink(isActive)} className="text-dark">
+                My Profile
               </NavLink>
             </Nav>
           </BNavbar.Collapse>
