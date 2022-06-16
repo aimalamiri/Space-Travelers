@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Navbar from './components/Navbar';
-import About from './pages/About';
+import Profile from './pages/Profile';
 import Missions from './pages/Missions';
 import './App.css';
 import Rockets from './pages/Rockets';
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Rockets />} />
             <Route path="/missions" element={<Missions />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
       </Container>
