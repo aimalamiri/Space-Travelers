@@ -2,7 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { Row, Col, Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { cancelRocket, reserveRocket } from '../redux/rockets/reducer';
+import { reserveRocket } from '../redux/rockets/reducer';
 import './Rocket.css';
 
 const Rocket = (props) => {
@@ -19,13 +19,9 @@ const Rocket = (props) => {
     dispatch(reserveRocket(id));
   };
 
-  const cancelRocketHandler = () => {
-    dispatch(cancelRocket(id));
-  };
-
   return (
     <Row id={id} className="my-4">
-      <Col md={5}>
+      <Col md={3}>
         <img src={img} alt="rocket img" className="w-100" />
       </Col>
       <Col>
@@ -34,7 +30,7 @@ const Rocket = (props) => {
           <span className={(reserved) ? 'reserve-span' : ' '}>{(reserved) ? 'Reserved' : null }</span>
           {description}
         </p>
-        <Button onClick={(reserved) ? cancelRocketHandler : reserveRocketHandler} variant={reserved ? 'outline-secondary' : 'primary'}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket' }</Button>
+        <Button onClick={reserveRocketHandler} variant={reserved ? 'outline-secondary' : 'primary'}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket' }</Button>
       </Col>
     </Row>
   );
