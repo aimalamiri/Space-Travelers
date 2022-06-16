@@ -3,3 +3,7 @@
   padding: 1rem 1.2rem;
   text-align: left;
 }
+
+.btn-action {
+  min-width: 140px;
+}

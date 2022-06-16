@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import { Button, Badge } from 'react-bootstrap';
 import { joinMissionAction } from '../redux/missions/missions';
 import './Mission.css';
 
@@ -11,7 +11,7 @@ const Mission = (props) => {
     mission_name: name,
     mission_id: id,
     description,
-    IsJoined,
+    isJoined,
   } = mission.mission;
 
   const dispach = useDispatch();
@@ -26,17 +26,18 @@ const Mission = (props) => {
       <td>{name}</td>
       <td>{description}</td>
       <td>
-        {' '}
-        <p className="member-status">NOT A MEMBER</p>
+        <Badge bg={isJoined ? 'info' : 'secondary'}>
+          { isJoined ? 'Active Member' : 'NOT A MEMBER' }
+        </Badge>
       </td>
       <td>
-        {' '}
-        {IsJoined ? '' : (
-          <Button variant="outline-secondary" type="Button" id={id} onClick={handleJoinMission}>
-            Join Mission
-          </Button>
-        )}
-
+        <Button
+          variant={isJoined ? 'outline-danger' : 'outline-secondary'}
+          className="btn-action"
+          onClick={handleJoinMission}
+        >
+          { isJoined ? 'Leave Mission' : 'Join Mission' }
+        </Button>
       </td>
     </tr>
   );
