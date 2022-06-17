@@ -1,5 +1,7 @@
 import { Provider } from 'react-redux';
-import { render, screen, waitFor, fireEvent } from '@testing-library/react';
+import {
+  render, screen, waitFor, fireEvent,
+} from '@testing-library/react';
 import Rockets from './Rockets';
 import MyProfile from './Profile';
 import store from '../redux/store';
@@ -34,7 +36,7 @@ describe('Test Rockets page', () => {
     render(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
     await waitFor(() => {
       expect(screen.getAllByText('Reserve Rocket').length).toBeGreaterThan(0);
@@ -45,7 +47,7 @@ describe('Test Rockets page', () => {
     render(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
     const reserveButtons = await screen.findAllByText('Reserve Rocket');
     fireEvent.click(reserveButtons[0]);
@@ -73,7 +75,7 @@ describe('Test Rockets page', () => {
     const tree = render(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
     await expect(tree).toMatchSnapshot();
   });
