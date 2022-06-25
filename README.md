@@ -12,6 +12,7 @@ The user can reserve a rocket and it'll update the state automatically, and also
 
 - React
 - Redux
+- React Router
 - React Bootstrap
 
 ## Live Demo
