@@ -73,7 +73,7 @@ Type this command into the terminal:
 - Twitter: [@meaimal](https://twitter.com/meaimal)
 - LinkedIn: [Aimal Amiri](https://linkedin.com/in/aimal-amiri)
 
-👤 **Roberto A. Baños Alvarez**
+👤 **Nwachan Theophile**
 
 - GitHub: [@Theophileaseh](https://github.com/Theophileaseh)
 - Twitter: [@NwachanT](https://twitter.com/NwachanT)
